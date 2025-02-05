@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Personal Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+<div class="headtext">
+    <p>Developer</p>
+    <h1>Hi, I'm James Smith.</h1>
+    <img src="/images/image.jpeg" alt="Photo" class="Photo">
+</div>
+</div>
+<!--------About_Section--------->
+<section id="about">
+    <div class="row">
+        <div class="about-col-1">
+            <img src="/images/Capture.JPG" alt="Photo2" class="Photo2">
+        </div>
+        <div class="about-col-2">
+            <h1>About Me</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel iaculis purus. 
+                In vulputate dui quis orci auctor, nec fringilla justo sodales. Etiam at pretium massa. Mauris dictum 
+                mi eget sapien ornare malesuada sed sit amet lectus. Ut at urna odio. Maecenas eu faucibus massa.
+                 Fusce nec aliquet enim, at faucibus augue.
+            </p>
+            <div class="tabs">
+                <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                <p class="tab-links"onclick="opentab('Skills')">Skills</p>
+            </div>
+            <div class="tab-contents active-tab" id="Education">
+                <ul>
+                    <li><span>Weston College</span><br>BTEC Level 3 Extended Diploma in Computer science
+                        Date Completed: [June, 2021]
+                        </li>
+                    <li><span>University Of The West Of England</span><br>BSc/BA Computer Science (Hons)
+                        Expected Graduation: [June, 2025]
+                        </li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Experience in: HTML, CSS and Javascript.</li>
+                    <li><span>Server Side developement</span><br>Experience in: Python, Kotlin, Java, C++, MySQL and Flask. </li>
+                    <li><span>Interests</span><br>Designing and developing web & mobile applications, database developement and software developement.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!----------Personal_Projects-------------->
+<section id="personal-projects">
+    <div class="personal-projects-col1">
+        <h1>Personal Projects </h1>
+        <div class="projects-list">
+            <div>
+                <h2>Weather App</h2>
+                <p>explain more...</p>
+                <a href="https://github.com/jsmith3979/WeatherWebApp">Link to project</a>
+            </div>
+        </div>
+        <div class="projects-list">
+            <div>
+                <h2>Calendar Mobile App</h2>
+                <p>explain more...</p>
+                <a href="https://github.com/jsmith3979/CalendarApp/tree/main">Link to project</a>
+            </div>
+        </div>
+        <div class="projects-list">
+            <div>
+                <h2>Yugioh Card Game</h2>
+                <p>explain more...</p>
+                <a href="https://github.com/jsmith3979/Yugioh_game">Link to project</a>
+            </div>
+        </div>
+        <div class="projects-list">
+            <div>
+                <h2>AI-Genetic Algorithm</h2>
+                <p>explain more...</p>
+                <a href="https://github.com/jsmith3979/AI-Program">Link to project</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+
+</html>
